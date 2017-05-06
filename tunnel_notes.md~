@@ -1,0 +1,47 @@
+Dev Tunnel Notes
+=================
+
+DISSENT Chaperone - Minimal Viable Service
+------------------------------------------
+ASK Reverse synthesis
+
+Basecamp -3
+1. Generate JSON Object for PagerDuty
+2. Mock JSON Object (Mock Room, +Learner Status, +Trial Arm) with node.js Lambda Code Chaperone Shuttle
+3. Test to satisfaction on 'DISSENT' Chaperone minimal trigger
+4. DynamoDB Table set-ups:
+- resus (device_id, calmunity, uniqueunlock (sageword), [calmunity_safewords], address, lastaddresschange (date), ...., (latest), driver_status, [incident_key])
+- incident logs (calmunity, incident_key [device_id])
+- calmunity (stopword, safeword, nonsexual_conflictsageword)
+- devices (device_id, term_of_activity, [resu_guid])
+- healthwarn (resu_guid, device_id, status, last_update, expiration, provider_pointer, accesscost) [update every 24hrs]
+- sagecount (device_id, period_state, week, month, year)
+- gruewarns (resu_guid, device_id, privacy, expiration, counsel_cue)
+- dissentwarns (resu_guid, device_id, privacy, expiration, counsel_cue, [address], [lastaddresschange])
+- sleepdebt (resu_guid, device_id, [calmunity], [house], steep_start1, steep_end1, steep_start2, steep_start2, steep_start3, steep_end3, steep_start4, steep_end4, steep_start5, steep_end5, steep_start6, steep_end6, rest_start7, rest_end7, last_week, this_week, wake_time1, wake_time2, wake_time3, wake_time4, wake_time5, wake_time6, nowake_time7, nowake_restday [driver_status], driverwarn, slee)
+
+Basecamp -2
+1. Add payload handling code for DISSENT READY, DISSENT SET
+2. Generate JSON Object Alert iteratively from tables, with Response Pattern, Alert Intensity Dynamically, with Simple resus Table Pulls, writeback latest incident-key to resu table on overwrite and uniquely to incident log, Lowest Latency Search
+
+Basecamp -1
+1. Test prove remaining DynamoDB, Lambda, device_id, and resu exchange sufficiency within Amazon ecossys, without external https:// endpoint
+2. Reedit db tables with findings
+3. Build db entry sequence system on ASK device_id set-up, Camtasia advised Admin experience at this early test of the test-pilot stage, requiring here manual or voice-assisted observed device_id entry confirmations
+4. Test ASK set-up on number of Echo Devices to desired JSON Object, test rapidity of resu entry prep and load, press for 5m or less on arbitrarily hard resu info available with presorted init healthlog exchange or health entry post-process within 30 (University) - 90 (City) preventive days
+5. Test push JSON to PagerDuty with range of "READY", "SET", "GO" / "MANGO" Codes
+
+Basecamp 0
+0. Write incident_key back to device_id table for ongoing incident management updates
+1. Set up prep layer based on Housing Calmunity Complex, with basic+ error-checking of room entries
+2. Set up map between Calmunity Complex and Responders Union in PagerDuty Branches
+3. Verify actuation in 1.869s or less, measure alert times carefully, pull down as close as possible to 1.869s with ASK/Lambda/PD Infrastructure
+4. Prepare Seamless Court Demo on Reckless Conduct, given any Phone #, Email Address, with timing variances described
+
+Not necessarily complete, but a good starting point for some of the more time consuming dev_tunnels on the ASK MVS.
+
+Basecamp 1
+- Systematic Entry Validations on Launch Tables
+- Systematic Default Loads on Launch Tables
+- Calmunity MDM Models, MDM Entry Interface (Start with Assuming IT Service Expertise, admin webapps at this point, assume relatively high precision or human validation, forced duct tape on Trust DISSENT on Calmunity MDM_PagerDuty Set-up match)
+- 
